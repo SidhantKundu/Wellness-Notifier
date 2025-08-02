@@ -1,0 +1,75 @@
+{
+  "reminders": {
+    "water": {
+      "interval_minutes": 75,
+      "messages": [
+        "💧 Time for some H2O! A hydrated mind is a sharp mind.",
+        "💧 Quick break for water! It's the easiest way to boost your energy.",
+        "💧 Don't forget to drink up! Your body will thank you.",
+        "💧 Stay hydrated, stay healthy. Time for a glass of water.",
+        "💧 Feeling sluggish? Water might be the answer. Have a sip!",
+        "💧 Let's raise a glass (of water) to your well-being!",
+        "💧 Hydration check! Have you had enough water today?"
+      ],
+      "enabled": true
+    },
+    "eye_rest": {
+      "interval_minutes": 20,
+      "messages": [
+        "👁️ Give your eyes a break. Look at something 20 feet away for 20 seconds.",
+        "👁️ Time for the 20-20-20 rule! Protect your peepers.",
+        "👁️ Your screen will be here when you get back. Rest your eyes.",
+        "👁️ Prevent eye strain! Look away from the screen now.",
+        "👁️ Blink, breathe, and look away. Your eyes deserve it.",
+        "👁️ A moment of rest for your eyes can prevent headaches later."
+      ],
+      "enabled": true
+    },
+    "stretch": {
+      "interval_minutes": 45,
+      "messages": [
+        "🧘 Time to stretch it out! Stand up and reach for the sky.",
+        "🧘 Loosen up! A quick stretch can release a lot of tension.",
+        "🧘 Your back and neck will thank you. Time for a stretch break.",
+        "🧘 Get the blood flowing! Stand up and move your body.",
+        "🧘 Sitting is the new smoking. Let's stand up and stretch!",
+        "🧘 Shake it off! A little movement goes a long way."
+      ],
+      "enabled": true
+    },
+    "lunch": {
+      "time": "13:30",
+      "messages": [
+        "🍽️ Lunch time! Step away from your desk and enjoy a proper meal.",
+        "🍽️ Fuel up! Your brain and body need energy to keep going.",
+        "🍽️ It's time to eat! Bon appétit!",
+        "🍽️ A mindful meal away from your screen can do wonders. Enjoy your lunch."
+      ],
+      "enabled": true
+    },
+    "end_day": {
+      "time": "19:30",
+      "messages": [
+        "🌅 Work is done! Time to close the laptop and enjoy your evening.",
+        "🌅 You've done enough for today. Time to wind down and relax.",
+        "🌅 The workday is over. Transition to your personal time, you've earned it!",
+        "🌅 Clocking out time! Leave work behind and focus on you."
+      ],
+      "enabled": true
+    }
+  },
+  "settings": {
+    "busy_delay_options": [
+      1,
+      5,
+      10
+    ],
+    "escalation_threshold": 2,
+    "escalation_window_hours": 2,
+    "data_retention_days": 30,
+    "notification_position": "bottom_right",
+    "compact_mode": true,
+    "auto_close_seconds": 45,
+    "motivational_cooldown_minutes": 30
+  }
+}
