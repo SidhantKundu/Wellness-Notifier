@@ -94,44 +94,81 @@ class WellnessReminder:
         """Create default configuration file"""
         # This function is now a fallback. The primary config is reminder_config.json
         default_config = {
-            "reminders": {
-                "water": {
-                    "interval_minutes": 2,
-                    "messages": ["💧 Time to drink water! Stay hydrated for better focus and energy."],
+                "reminders": {
+                    "water": {
+                    "interval_minutes": 75,
+                    "messages": [
+                        "💧 Time for some H2O! A hydrated mind is a sharp mind.",
+                        "💧 Quick break for water! It's the easiest way to boost your energy.",
+                        "💧 Don't forget to drink up! Your body will thank you.",
+                        "💧 Stay hydrated, stay healthy. Time for a glass of water.",
+                        "💧 Feeling sluggish? Water might be the answer. Have a sip!",
+                        "💧 Let's raise a glass (of water) to your well-being!",
+                        "💧 Hydration check! Have you had enough water today?"
+                    ],
                     "enabled": True
+                    },
+                    "eye_rest": {
+                    "interval_minutes": 20,
+                    "messages": [
+                        "👁️ Give your eyes a break. Look at something 20 feet away for 20 seconds.",
+                        "👁️ Time for the 20-20-20 rule! Protect your peepers.",
+                        "👁️ Your screen will be here when you get back. Rest your eyes.",
+                        "👁️ Prevent eye strain! Look away from the screen now.",
+                        "👁️ Blink, breathe, and look away. Your eyes deserve it.",
+                        "👁️ A moment of rest for your eyes can prevent headaches later."
+                    ],
+                    "enabled": True
+                    },
+                    "stretch": {
+                    "interval_minutes": 45,
+                    "messages": [
+                        "🧘 Time to stretch it out! Stand up and reach for the sky.",
+                        "🧘 Loosen up! A quick stretch can release a lot of tension.",
+                        "🧘 Your back and neck will thank you. Time for a stretch break.",
+                        "🧘 Get the blood flowing! Stand up and move your body.",
+                        "🧘 Sitting is the new smoking. Let's stand up and stretch!",
+                        "🧘 Shake it off! A little movement goes a long way."
+                    ],
+                    "enabled": True
+                    },
+                    "lunch": {
+                    "time": "13:30",
+                    "messages": [
+                        "🍽️ Lunch time! Step away from your desk and enjoy a proper meal.",
+                        "🍽️ Fuel up! Your brain and body need energy to keep going.",
+                        "🍽️ It's time to eat! Bon appétit!",
+                        "🍽️ A mindful meal away from your screen can do wonders. Enjoy your lunch."
+                    ],
+                    "enabled": True
+                    },
+                    "end_day": {
+                    "time": "19:30",
+                    "messages": [
+                        "🌅 Work is done! Time to close the laptop and enjoy your evening.",
+                        "🌅 You've done enough for today. Time to wind down and relax.",
+                        "🌅 The workday is over. Transition to your personal time, you've earned it!",
+                        "🌅 Clocking out time! Leave work behind and focus on you."
+                    ],
+                    "enabled": True
+                    }
                 },
-                "eye_rest": {
-                    "interval_minutes": 1,
-                    "messages": ["👁️ Time to rest your eyes! Look away from the screen for 20 seconds."],
-                    "enabled": True
-                },
-                "stretch": {
-                    "interval_minutes": 3,
-                    "messages": ["🧘 Time to stretch! Stand up and do some light stretching."],
-                    "enabled": True
-                },
-                "lunch": {
-                    "time": "18:05",
-                    "messages": ["🍽️ Lunch time! Take a proper break and nourish yourself."],
-                    "enabled": True
-                },
-                "end_day": {
-                    "time": "18:10",
-                    "messages": ["🌅 End of workday! Time to wind down and transition to personal time."],
-                    "enabled": True
+                "settings": {
+                    "busy_delay_options": [
+                        1,
+                        5,
+                        10
+                    ],
+                    "escalation_threshold": 2,
+                    "escalation_window_hours": 2,
+                    "data_retention_days": 30,
+                    "notification_position": "bottom_right",
+                    "compact_mode": True,
+                    "auto_close_seconds": 45,
+                    "motivational_cooldown_minutes": 30
                 }
-            },
-            "settings": {
-                "busy_delay_options": [10, 15, 30],
-                "escalation_threshold": 2,
-                "escalation_window_hours": 2,
-                "data_retention_days": 30,
-                "notification_position": "bottom_right",
-                "compact_mode": True,
-                "auto_close_seconds": 45,
-                "motivational_cooldown_minutes": 30
-            }
-        }
+                }
+
         
         # Use absolute path for the config file
         with open(BASE_DIR / 'reminder_config.json', 'w', encoding='utf-8') as f:
